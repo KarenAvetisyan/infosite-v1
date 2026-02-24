@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- SEO Meta Tags -->
+    <title>Бизнес решения</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <meta name="description" content="сео описание">
+    <meta name="keywords" content="сео ключевые слова">
+    
+    <meta property="og:title" content="нужен текст">
+    <meta property="og:description" content="нужен текст">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://your-domain.ru/">
+    <meta property="og:image" content="http://your-domain.ru//img/og-image.jpg">
+    
+    <link rel="canonical" href="http://your-domain.ru/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Onest:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Modal -->
+    <div class="modal" id="my-modal">
+        <div class="modal-overlay" data-close-modal></div>
+        <div class="m-container">
+            <button type="button" class="m-close" data-close-modal></button>
+            <div class="m-content">
+                <form class="_form" action="mail.php" method="POST" autocomplete="off" novalidate>
+                    <input type="hidden" name="website" value="">
+                    <input type="hidden" name="form_time" value="0" id="form_time">
+
+                    <div class="_title-wrap">
+                        <h3 id="modal-title">Оставьте онлайн заявку:</h3>
+                    </div>
+                    <div class="_form-group__label-wrap">
+                        <div class="_form-group__label">
+                            <span class="_form-group__holder">Ваше имя</span>
+                            <div class="_form-group">
+                                <input type="text" name="name" class="_form-group__input" placeholder="Имя" autocomplete="name">
+                            </div>
+                        </div>
+                        <div class="_form-group__label">
+                            <span class="_form-group__holder">Название компании&nbsp;<span>*</span></span>
+                            <div class="_form-group">
+                                <input type="text" name="company" class="_form-group__input _req" placeholder="Компания" required>
+                                <span class="req__text" role="alert">Обязательное поле</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_form-group__label-wrap">
+                        <div class="_form-group__label">
+                            <span class="_form-group__holder">Ваш E-mail&nbsp;<span>*</span></span>
+                            <div class="_form-group">
+                                <input type="email" name="email" class="_form-group__input _req _email" placeholder="E-mail" autocomplete="email">
+                                <span class="req__text" role="alert">Обязательное поле</span>
+                                <span class="error__text" role="alert">Пожалуйста, укажите корректный email</span>
+                            </div>
+                        </div>
+                        <div class="_form-group__label">
+                            <span class="_form-group__holder">Ваш телефон&nbsp;<span>*</span></span>
+                            <div class="_form-group">
+                                <input type="tel" name="phone" class="_phone phone-mask _req _form-group__input" placeholder="Телефон" autocomplete="tel">
+                                <span class="req__text" role="alert">Обязательное поле</span>
+                                <span class="error__text" role="alert">Пожалуйста, укажите корректный номер телефона</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_form-group__label">
+                        <span class="_form-group__holder">Ваше сообщение</span>
+                        <div class="_form-group">
+                            <textarea name="message" placeholder="Сообщение" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="_form-group__agree">
+                        <label class="_form-group _form-group__agree-label">
+                            <input class="_form-group__agree-input _req" type="checkbox" name="agree">
+                            <span>Я даю согласие на обработку персональных данных</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="_form-submit _btn-primary">
+                        <span>Оставить заявку<i class="icon icon-arr-right" aria-hidden="true"></i></span>
+                    </button>
+                    <div class="success-message">Спасибо, Ваше заявка отправлена!<br> Мы свяжемся с вами в ближайшее время.</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <header class="header">
+            <div class="_container">
+                <div class="header-wrap">
+                    <div class="header-logo">
+                        <img src="logo.png" alt="лого" fetchpriority="high">
+                    </div>
+                    <div class="header-details">
+                        <address class="_socials-contact">
+                            <a href="tel:80000000000" aria-label="Позвонить нам">8-000-000-00-00</a>
+                            <a href="mailto:yourmail@gmail.com" aria-label="Написать нам">yourmail@gmail.com</a>
+                        </address>
+                        <div class="header-details__wrap">
+                            <ul class="_socials" aria-label="Социальные сети">
+                                <li><a class="_socials-sprite" href="https://t.me/Front_end_fl" target="_blank" aria-label="Telegram" rel="noopener noreferrer"><img src="img/tg-icon.svg" alt="" width="24" height="24" loading="lazy"></a></li>
+                                <li><a class="_socials-sprite" href="#" aria-label="WhatsApp" rel="noopener noreferrer"><img src="img/ws-icon.svg" alt="" width="24" height="24" loading="lazy"></a></li>
+                            </ul>
+                            <button type="button" class="header-btn _btn-primary" data-id="my-modal" data-show-modal>Оставить заявку</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="_container">
+                    <div class="hero-content">
+                        <h1 id="hero-title">Эффективные решения для вашего бизнеса</h1>
+                        <p class="hero-subtitle">Мы помогаем компаниям расти, оптимизировать процессы и достигать стабильных результатов. Индивидуальный подход и практические решения под ваши задачи.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="offer" aria-labelledby="offer-title">
+                <div class="_container">
+                    <div class="_title">
+                        <h2 id="offer-title">Наши возможности</h2>
+                    </div>
+                    <div class="offer-wrap">
+                        <article class="offer-item">
+                            <h3 class="offer-item__title">Наши услуги</h3>
+                            <ul class="offer-item__list">
+                                <li>Комплексный анализ вашей ситуации</li>
+                                <li>Индивидуальная стратегия развития</li>
+                                <li>Оптимизация процессов и затрат</li>
+                                <li>Сопровождение на всех этапах</li>
+                            </ul>
+                        </article>
+                        <article class="offer-item">
+                            <h3 class="offer-item__title">Почему выбирают нас:</h3>
+                            <ul class="offer-item__list">
+                                <li>Полная конфиденциальность</li>
+                                <li>Профессиональная команда</li>
+                                <li>Прозрачные условия сотрудничества</li>
+                                <li>Ориентация на результат</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="_container">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="лого" loading="lazy">
+                </div>
+                <div class="footer-btn__wrap">
+                    <button type="button" class="_btn-primary" data-id="my-modal" data-show-modal>Свяжитесь с нами для бесплатной&nbsp;консультации</button>
+                    <p>Не откладывайте решение ваших проблем — позвоните нам уже сегодня</p>
+                </div>
+                <address class="footer-contact__wrap">
+                    <div class="footer-contact__item">Телефон: <a href="tel:80000000000">8-000-000-00-00</a></div>
+                    <div class="footer-contact__item">Email: <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></div>
+                </address>
+                <div class="footer-social__wrap">
+                    <ul class="_socials" aria-label="Мы в социальных сетях">
+                        <li><a class="_socials-sprite" href="https://t.me/Front_end_fl" target="_blank" aria-label="Telegram" rel="noopener noreferrer"><img src="img/tg-icon.svg" alt="" width="24" height="24" loading="lazy"></a></li>
+                        <li><a class="_socials-sprite" href="#" aria-label="WhatsApp" rel="noopener noreferrer"><img src="img/ws-icon.svg" alt="" width="24" height="24" loading="lazy"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js" defer></script>
+    <script src="js/form-send.js" defer></script>
+</body>
+</html>

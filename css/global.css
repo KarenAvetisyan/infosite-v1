@@ -1,0 +1,69 @@
+*,  ::after,  ::before  {
+    box-sizing:  border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+    margin-top: 0;
+}
+img,
+svg {
+    vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 0.5rem;
+    font-weight: initial;
+}
+a, input, button, textarea{
+  color: inherit;
+  font-family: inherit;
+}
+p {
+    margin-bottom: 15px;
+}
+img {
+    border-style: none;
+    max-width: 100%;
+}
+svg {
+    overflow: hidden;
+}
+section {
+    display: block;
+}
+
+._container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 577px) {
+    ._container{
+        max-width: 546px;
+    }
+}
+@media (min-width: 768px) {
+    ._container{
+        max-width: 704px;
+    }
+}
+@media (min-width: 992px) {
+    ._container{
+        max-width: 956px;
+    }
+}
+@media (min-width: 1200px) {
+    ._container{
+        max-width: 1156px;
+    }
+}
+
